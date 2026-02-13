@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="./static/mywebscript.js"></script>
@@ -29,4 +29,88 @@
             <div id="system_response" style="padding: 25px 25px 25px 25px;"></div>
         </div>
     </div>
+</body> -->
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="./static/mywebscript.js"></script>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .center-heading {
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+
+        textarea {
+            resize: none;
+            border-radius: 10px !important;
+        }
+
+        .btn-custom {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            border: none;
+            border-radius: 25px;
+            padding: 10px 25px;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        #system_response {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            min-height: 80px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="card-body p-5">
+
+        <h1 class="center-heading mb-4">NLP - Emotion Detection</h1>
+
+        <div class="form-group">
+            <label>Please enter the text to be analyzed</label>
+            <textarea class="form-control" id="textToAnalyze" rows="4"
+                placeholder="Type your sentence here..."></textarea>
+        </div>
+
+        <div class="text-center mt-4">
+            <button onclick="RunSentimentAnalysis()" class="btn btn-custom">
+                Analyze Emotion
+            </button>
+        </div>
+
+        <div class="mt-5">
+            <h5>Result of Emotion Detection</h5>
+            <div id="system_response" class="p-3 mt-3"></div>
+        </div>
+
+    </div>
+</div>
+
 </body>
+</html>
